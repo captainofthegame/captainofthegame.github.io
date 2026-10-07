@@ -77,9 +77,11 @@ a:focus-visible, .button:focus-visible, .fleet:focus-visible {
 }
 .button[aria-disabled="true"] { cursor: default; }
 
-/* The fleet line: every ship in the game, smallest to biggest, on the water. */
+/* The fleet line: every ship in the game, smallest to biggest, on the water.
+   Each ship is a button that shows its facts in the card under the fleet. */
+.fleet-wrap { position: relative; margin-top: 46px; }
+
 .fleet {
-  margin-top: 46px;
   display: flex;
   align-items: flex-end;
   gap: 26px;
@@ -93,9 +95,14 @@ a:focus-visible, .button:focus-visible, .fleet:focus-visible {
 .ship {
   flex: none;
   scroll-snap-align: center;
-  margin: 0;
   position: relative;
-  padding-bottom: 64px;
+  margin: 0;
+  padding: 0 0 64px;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 .ship img {
   height: var(--h);
@@ -103,9 +110,9 @@ a:focus-visible, .button:focus-visible, .fleet:focus-visible {
   animation: bob 4.2s ease-in-out infinite;
   animation-delay: calc(var(--n) * -0.35s);
 }
-.ship figcaption {
+.ship .name {
   position: absolute;
-  left: 0; right: 0; bottom: 14px;
+  left: -10px; right: -10px; bottom: 18px;
   font-size: 14px;
   white-space: nowrap;
   color: rgba(238, 244, 249, 0.8);
@@ -120,6 +127,41 @@ a:focus-visible, .button:focus-visible, .fleet:focus-visible {
   color: #fff;
   font: 16px/30px var(--display);
 }
+.ship:hover .name { color: #fff; }
+.ship[aria-pressed="true"] .name { color: var(--gold-light); font-weight: 700; }
+.ship[aria-pressed="true"]::after {
+  content: "";
+  position: absolute;
+  left: 22%; right: 22%; bottom: 6px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--gold);
+}
+.ship:focus-visible { outline: 3px solid var(--gold-light); outline-offset: 4px; border-radius: 12px; }
+
+/* Arrows only where there is a mouse; phones swipe the fleet. */
+.fleet-arrow {
+  display: none;
+  position: absolute;
+  top: calc(50% - 60px);
+  z-index: 1;
+  width: 56px; height: 56px;
+  place-items: center;
+  border: 0;
+  border-bottom: 5px solid var(--gold-edge);
+  border-radius: 50%;
+  background: var(--gold);
+  color: #3b2304;
+  font: 40px/1 var(--display);
+  cursor: pointer;
+}
+.fleet-arrow.prev { left: 14px; }
+.fleet-arrow.next { right: 14px; }
+.fleet-arrow:disabled { opacity: 0; pointer-events: none; }
+.fleet-arrow:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .fleet-arrow { display: grid; }
+}
 
 .waterline {
   height: 4px;
@@ -129,9 +171,27 @@ a:focus-visible, .button:focus-visible, .fleet:focus-visible {
 .fleet-hint {
   font-size: 15px;
   color: rgba(238, 244, 249, 0.7);
-  margin: 58px 0 0;
-  padding-bottom: 40px;
+  margin: 58px 0 20px;
 }
+
+/* The ship card under the fleet, styled like the rank card in the game. */
+.ship-info {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 26px;
+  align-items: center;
+  max-width: 760px;
+  margin: 0 auto 56px;
+  padding: 22px 30px;
+  text-align: left;
+  background: var(--navy);
+  border: 3px solid rgba(255, 209, 102, 0.55);
+  border-radius: 26px;
+}
+.ship-info .info-image { max-height: 120px; width: auto; justify-self: center; }
+.ship-info .info-name { font-size: 32px; margin: 0; color: var(--gold-light); }
+.ship-info .info-level { font-size: 15px; margin: 2px 0 10px; color: rgba(238, 244, 249, 0.75); }
+.ship-info .info-fact { margin: 0; max-width: 60ch; }
 
 @keyframes bob {
   0%, 100% { transform: translateY(0) rotate(-0.6deg); }
@@ -213,4 +273,7 @@ footer p { margin: 0; }
   .log .art img { max-height: 56px; }
   .captain .wrap { grid-template-columns: 1fr; gap: 24px; }
   .captain svg { width: 84px; }
+  .ship-info { grid-template-columns: 88px 1fr; gap: 16px; padding: 18px 18px; }
+  .ship-info .info-image { max-height: 70px; }
+  .ship-info .info-name { font-size: 26px; }
 }

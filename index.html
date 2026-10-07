@@ -22,85 +22,99 @@
       <p class="pitch">Merge small boats into bigger ships, from a tiny rowboat all the way to a grand ocean liner.</p>
       <span class="button" aria-disabled="true">Coming soon to Google Play</span>
     </div>
-    <div class="fleet" tabindex="0" aria-label="The fleet, from the smallest boat to the biggest ship">
-      <figure class="ship" style="--h: 56px; --n: 1">
-        <img src="ship_01.webp" alt="Small Rowboat" height="56" loading="lazy">
-        <span class="level" aria-hidden="true">1</span>
-        <figcaption>Small Rowboat</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 65px; --n: 2">
-        <img src="ship_02.webp" alt="Rowboat" height="65" loading="lazy">
-        <span class="level" aria-hidden="true">2</span>
-        <figcaption>Rowboat</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 74px; --n: 3">
-        <img src="ship_03.webp" alt="Sailboat" height="74" loading="lazy">
-        <span class="level" aria-hidden="true">3</span>
-        <figcaption>Sailboat</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 83px; --n: 4">
-        <img src="ship_04.webp" alt="Speedboat" height="83" loading="lazy">
-        <span class="level" aria-hidden="true">4</span>
-        <figcaption>Speedboat</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 92px; --n: 5">
-        <img src="ship_05.webp" alt="Jet Ski" height="92" loading="lazy">
-        <span class="level" aria-hidden="true">5</span>
-        <figcaption>Jet Ski</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 101px; --n: 6">
-        <img src="ship_06.webp" alt="Fishing Boat" height="101" loading="lazy">
-        <span class="level" aria-hidden="true">6</span>
-        <figcaption>Fishing Boat</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 110px; --n: 7">
-        <img src="ship_07.webp" alt="Houseboat" height="110" loading="lazy">
-        <span class="level" aria-hidden="true">7</span>
-        <figcaption>Houseboat</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 119px; --n: 8">
-        <img src="ship_08.webp" alt="Airboat" height="119" loading="lazy">
-        <span class="level" aria-hidden="true">8</span>
-        <figcaption>Airboat</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 128px; --n: 9">
-        <img src="ship_09.webp" alt="Harbor Tug" height="128" loading="lazy">
-        <span class="level" aria-hidden="true">9</span>
-        <figcaption>Harbor Tug</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 137px; --n: 10">
-        <img src="ship_10.webp" alt="Ocean Tug" height="137" loading="lazy">
-        <span class="level" aria-hidden="true">10</span>
-        <figcaption>Ocean Tug</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 146px; --n: 11">
-        <img src="ship_11.webp" alt="Cargo Ship" height="146" loading="lazy">
-        <span class="level" aria-hidden="true">11</span>
-        <figcaption>Cargo Ship</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 155px; --n: 12">
-        <img src="ship_12.webp" alt="Bulk Carrier" height="155" loading="lazy">
-        <span class="level" aria-hidden="true">12</span>
-        <figcaption>Bulk Carrier</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 164px; --n: 13">
-        <img src="ship_13.webp" alt="Container Ship" height="164" loading="lazy">
-        <span class="level" aria-hidden="true">13</span>
-        <figcaption>Container Ship</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 173px; --n: 14">
-        <img src="ship_14.webp" alt="Ocean Liner" height="173" loading="lazy">
-        <span class="level" aria-hidden="true">14</span>
-        <figcaption>Ocean Liner</figcaption>
-      </figure>
-      <figure class="ship" style="--h: 182px; --n: 15">
-        <img src="ship_15.webp" alt="Grand Ocean Liner" height="182" loading="lazy">
-        <span class="level" aria-hidden="true">15</span>
-        <figcaption>Grand Ocean Liner</figcaption>
-      </figure>
+    <div class="fleet-wrap">
+      <button type="button" class="fleet-arrow prev" aria-label="Show smaller ships">&lsaquo;</button>
+      <div class="fleet" aria-label="The fleet, from the smallest boat to the biggest ship">
+        <button type="button" class="ship" style="--h: 56px; --n: 1" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_01.webp" alt="" height="56">
+          <span class="level" aria-hidden="true">1</span>
+          <span class="name">Small Rowboat</span>
+        </button>
+        <button type="button" class="ship" style="--h: 65px; --n: 2" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_02.webp" alt="" height="65">
+          <span class="level" aria-hidden="true">2</span>
+          <span class="name">Rowboat</span>
+        </button>
+        <button type="button" class="ship" style="--h: 74px; --n: 3" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_03.webp" alt="" height="74">
+          <span class="level" aria-hidden="true">3</span>
+          <span class="name">Sailboat</span>
+        </button>
+        <button type="button" class="ship" style="--h: 83px; --n: 4" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_04.webp" alt="" height="83">
+          <span class="level" aria-hidden="true">4</span>
+          <span class="name">Speedboat</span>
+        </button>
+        <button type="button" class="ship" style="--h: 92px; --n: 5" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_05.webp" alt="" height="92">
+          <span class="level" aria-hidden="true">5</span>
+          <span class="name">Jet Ski</span>
+        </button>
+        <button type="button" class="ship" style="--h: 101px; --n: 6" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_06.webp" alt="" height="101">
+          <span class="level" aria-hidden="true">6</span>
+          <span class="name">Fishing Boat</span>
+        </button>
+        <button type="button" class="ship" style="--h: 110px; --n: 7" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_07.webp" alt="" height="110">
+          <span class="level" aria-hidden="true">7</span>
+          <span class="name">Houseboat</span>
+        </button>
+        <button type="button" class="ship" style="--h: 119px; --n: 8" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_08.webp" alt="" height="119">
+          <span class="level" aria-hidden="true">8</span>
+          <span class="name">Airboat</span>
+        </button>
+        <button type="button" class="ship" style="--h: 128px; --n: 9" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_09.webp" alt="" height="128">
+          <span class="level" aria-hidden="true">9</span>
+          <span class="name">Harbor Tug</span>
+        </button>
+        <button type="button" class="ship" style="--h: 137px; --n: 10" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_10.webp" alt="" height="137">
+          <span class="level" aria-hidden="true">10</span>
+          <span class="name">Ocean Tug</span>
+        </button>
+        <button type="button" class="ship" style="--h: 146px; --n: 11" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_11.webp" alt="" height="146">
+          <span class="level" aria-hidden="true">11</span>
+          <span class="name">Cargo Ship</span>
+        </button>
+        <button type="button" class="ship" style="--h: 155px; --n: 12" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_12.webp" alt="" height="155">
+          <span class="level" aria-hidden="true">12</span>
+          <span class="name">Bulk Carrier</span>
+        </button>
+        <button type="button" class="ship" style="--h: 164px; --n: 13" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_13.webp" alt="" height="164">
+          <span class="level" aria-hidden="true">13</span>
+          <span class="name">Container Ship</span>
+        </button>
+        <button type="button" class="ship" style="--h: 173px; --n: 14" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_14.webp" alt="" height="173">
+          <span class="level" aria-hidden="true">14</span>
+          <span class="name">Ocean Liner</span>
+        </button>
+        <button type="button" class="ship" style="--h: 182px; --n: 15" aria-pressed="false" aria-controls="ship-info">
+          <img src="ship_15.webp" alt="" height="182">
+          <span class="level" aria-hidden="true">15</span>
+          <span class="name">Grand Ocean Liner</span>
+        </button>
+      </div>
+      <button type="button" class="fleet-arrow next" aria-label="Show bigger ships">&rsaquo;</button>
     </div>
     <div class="waterline" aria-hidden="true"></div>
-    <p class="fleet-hint">15 ships to discover. Swipe the fleet to see them all.</p>
+    <p class="fleet-hint">Tap a ship to learn about it.</p>
+    <div class="wrap">
+      <section class="ship-info" id="ship-info" aria-live="polite">
+        <img class="info-image" src="ship_01.webp" alt="">
+        <div>
+          <h2 class="info-name">Small Rowboat</h2>
+          <p class="info-level">Level 1 of 15</p>
+          <p class="info-fact">Rowboats are among the oldest boats in history. People have rowed across rivers and bays for thousands of years.</p>
+        </div>
+      </section>
+    </div>
   </header>
 
   <main>
@@ -168,5 +182,49 @@
       <p><a href="privacy.html">Privacy policy</a></p>
     </div>
   </footer>
+  <script>
+    // Ship facts come from the game's data file.
+    const SHIPS = [{"name": "Small Rowboat", "fact": "Rowboats are among the oldest boats in history. People have rowed across rivers and bays for thousands of years."}, {"name": "Rowboat", "fact": "On older ships, lifeboats were large rowboats. Crews rowed them by hand to carry passengers to safety."}, {"name": "Sailboat", "fact": "A sailboat can travel against the wind by zig-zagging at an angle to it. Sailors call this tacking."}, {"name": "Speedboat", "fact": "At high speed, a speedboat's hull lifts up and skims on top of the water. This is called planing, and it cuts drag."}, {"name": "Jet Ski", "fact": "A jet ski has no outside propeller. A pump sucks water in underneath and blasts it out the back as a powerful jet."}, {"name": "Fishing Boat", "fact": "Many fishing boats use sonar fish finders that send sound pulses down to spot schools of fish below the hull."}, {"name": "Houseboat", "fact": "Houseboats are floating homes. Around 2,500 of them line the canals of Amsterdam, with families living aboard all year."}, {"name": "Airboat", "fact": "An airboat is pushed by a giant air propeller, so it can glide over shallow swamps where a normal propeller would get stuck."}, {"name": "Harbor Tug", "fact": "Harbor tugs are small but mighty. They push and pull ships many times their own size safely alongside the berth."}, {"name": "Ocean Tug", "fact": "Ocean-going tugs can tow oil rigs and disabled ships across entire oceans, sometimes for weeks at a time."}, {"name": "Cargo Ship", "fact": "Many general cargo ships carry their own cranes, so they can load and unload at small ports that have none."}, {"name": "Bulk Carrier", "fact": "Bulk carriers haul loose cargo like iron ore, coal and grain. The largest can carry around 400,000 tonnes in one trip."}, {"name": "Container Ship", "fact": "The biggest container ships carry over 24,000 containers. Lined up end to end, they would stretch more than 140 km."}, {"name": "Ocean Liner", "fact": "Before airliners, ocean liners were the fastest way across the Atlantic. They raced for the Blue Riband, the honor of the fastest crossing."}, {"name": "Grand Ocean Liner", "fact": "The grand liners of the early 1900s had four tall funnels, and often one of them was a dummy, added just to look more powerful."}];
+
+    const fleet = document.querySelector(".fleet");
+    const shipButtons = [...fleet.querySelectorAll(".ship")];
+    const info = {
+      image: document.querySelector(".info-image"),
+      name: document.querySelector(".info-name"),
+      level: document.querySelector(".info-level"),
+      fact: document.querySelector(".info-fact"),
+    };
+
+    function showShip(index) {
+      const ship = SHIPS[index];
+      const number = String(index + 1).padStart(2, "0");
+      info.image.src = "ship_" + number + ".webp";
+      info.name.textContent = ship.name;
+      info.level.textContent = "Level " + (index + 1) + " of " + SHIPS.length;
+      info.fact.textContent = ship.fact;
+      shipButtons.forEach((button, i) => button.setAttribute("aria-pressed", String(i === index)));
+    }
+
+    shipButtons.forEach((button, i) => button.addEventListener("click", () => showShip(i)));
+    showShip(0);
+
+    // Arrow buttons move the fleet sideways (shown on computers with a mouse).
+    const prev = document.querySelector(".fleet-arrow.prev");
+    const next = document.querySelector(".fleet-arrow.next");
+    const smooth = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+
+    function slide(direction) {
+      fleet.scrollBy({ left: direction * fleet.clientWidth * 0.6, behavior: smooth });
+    }
+    function updateArrows() {
+      prev.disabled = fleet.scrollLeft <= 4;
+      next.disabled = fleet.scrollLeft + fleet.clientWidth >= fleet.scrollWidth - 4;
+    }
+    prev.addEventListener("click", () => slide(-1));
+    next.addEventListener("click", () => slide(1));
+    fleet.addEventListener("scroll", updateArrows, { passive: true });
+    window.addEventListener("resize", updateArrows);
+    updateArrows();
+  </script>
 </body>
 </html>
