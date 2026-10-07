@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Captain of the Ship</title>
+  <meta name="description" content="Captain of the Ship is a merge game for Android. Merge small boats into bigger ships, from a rowboat to a grand ocean liner.">
+  <meta name="theme-color" content="#1d6fa3">
+  <meta property="og:title" content="Captain of the Ship">
+  <meta property="og:description" content="Merge small boats into bigger ships, from a rowboat to a grand ocean liner.">
+  <meta property="og:image" content="icon.png">
+  <link rel="icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1>Captain of the Ship</h1>
+      <p class="pitch">Merge small boats into bigger ships, from a tiny rowboat all the way to a grand ocean liner.</p>
+      <span class="button" aria-disabled="true">Coming soon to Google Play</span>
+    </div>
+    <div class="fleet" tabindex="0" aria-label="The fleet, from the smallest boat to the biggest ship">
+      <figure class="ship" style="--h: 56px; --n: 1">
+        <img src="ship_01.webp" alt="Small Rowboat" height="56" loading="lazy">
+        <span class="level" aria-hidden="true">1</span>
+        <figcaption>Small Rowboat</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 65px; --n: 2">
+        <img src="ship_02.webp" alt="Rowboat" height="65" loading="lazy">
+        <span class="level" aria-hidden="true">2</span>
+        <figcaption>Rowboat</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 74px; --n: 3">
+        <img src="ship_03.webp" alt="Sailboat" height="74" loading="lazy">
+        <span class="level" aria-hidden="true">3</span>
+        <figcaption>Sailboat</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 83px; --n: 4">
+        <img src="ship_04.webp" alt="Speedboat" height="83" loading="lazy">
+        <span class="level" aria-hidden="true">4</span>
+        <figcaption>Speedboat</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 92px; --n: 5">
+        <img src="ship_05.webp" alt="Jet Ski" height="92" loading="lazy">
+        <span class="level" aria-hidden="true">5</span>
+        <figcaption>Jet Ski</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 101px; --n: 6">
+        <img src="ship_06.webp" alt="Fishing Boat" height="101" loading="lazy">
+        <span class="level" aria-hidden="true">6</span>
+        <figcaption>Fishing Boat</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 110px; --n: 7">
+        <img src="ship_07.webp" alt="Houseboat" height="110" loading="lazy">
+        <span class="level" aria-hidden="true">7</span>
+        <figcaption>Houseboat</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 119px; --n: 8">
+        <img src="ship_08.webp" alt="Airboat" height="119" loading="lazy">
+        <span class="level" aria-hidden="true">8</span>
+        <figcaption>Airboat</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 128px; --n: 9">
+        <img src="ship_09.webp" alt="Harbor Tug" height="128" loading="lazy">
+        <span class="level" aria-hidden="true">9</span>
+        <figcaption>Harbor Tug</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 137px; --n: 10">
+        <img src="ship_10.webp" alt="Ocean Tug" height="137" loading="lazy">
+        <span class="level" aria-hidden="true">10</span>
+        <figcaption>Ocean Tug</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 146px; --n: 11">
+        <img src="ship_11.webp" alt="Cargo Ship" height="146" loading="lazy">
+        <span class="level" aria-hidden="true">11</span>
+        <figcaption>Cargo Ship</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 155px; --n: 12">
+        <img src="ship_12.webp" alt="Bulk Carrier" height="155" loading="lazy">
+        <span class="level" aria-hidden="true">12</span>
+        <figcaption>Bulk Carrier</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 164px; --n: 13">
+        <img src="ship_13.webp" alt="Container Ship" height="164" loading="lazy">
+        <span class="level" aria-hidden="true">13</span>
+        <figcaption>Container Ship</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 173px; --n: 14">
+        <img src="ship_14.webp" alt="Ocean Liner" height="173" loading="lazy">
+        <span class="level" aria-hidden="true">14</span>
+        <figcaption>Ocean Liner</figcaption>
+      </figure>
+      <figure class="ship" style="--h: 182px; --n: 15">
+        <img src="ship_15.webp" alt="Grand Ocean Liner" height="182" loading="lazy">
+        <span class="level" aria-hidden="true">15</span>
+        <figcaption>Grand Ocean Liner</figcaption>
+      </figure>
+    </div>
+    <div class="waterline" aria-hidden="true"></div>
+    <p class="fleet-hint">15 ships to discover. Swipe the fleet to see them all.</p>
+  </header>
+
+  <main>
+    <section class="play">
+      <div class="wrap">
+        <h2>How it plays</h2>
+        <ul class="log">
+          <li>
+            <div class="art"><img class="small" src="ship_01.webp" alt=""><img class="small" src="ship_01.webp" alt=""><img class="big" src="ship_02.webp" alt=""></div>
+            <div>
+              <h3>Merge to grow your fleet</h3>
+              <p>Drag a ship onto another ship of the same level and they become one bigger ship. Every ship earns coins, and bigger ships earn far more.</p>
+            </div>
+          </li>
+          <li>
+            <div class="art"><img class="small" src="crate.webp" alt=""><img class="big" src="crate_gold.webp" alt=""><img class="small" src="crate_rusty.webp" alt=""></div>
+            <div>
+              <h3>Catch the containers</h3>
+              <p>Containers float through the harbor. Blue ones bring coins or a free ship, gold ones bring a big prize, and rusty ones are best left alone.</p>
+            </div>
+          </li>
+          <li>
+            <div class="art"><img src="pirate.webp" alt=""></div>
+            <div>
+              <h3>Life at sea</h3>
+              <p>Fight off pirates, answer MAYDAY calls with your tugs, ride out storms, and watch for the ghost ship that only sails at night.</p>
+            </div>
+          </li>
+          <li>
+            <div class="art"><img src="ship_13.webp" alt=""></div>
+            <div>
+              <h3>Sail from port to port</h3>
+              <p>Reach each port's goal ship to sail on. Every new port pays more, and every rank you earn adds to your income.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="captain">
+      <div class="wrap">
+        <svg viewBox="0 0 120 232" role="img" aria-label="A captain's shoulder board with four gold stripes">
+          <path d="M20 44 L60 8 L100 44 L100 214 Q100 226 88 226 L32 226 Q20 226 20 214 Z" fill="#14213d" stroke="#ffd166" stroke-width="3"/>
+          <circle cx="60" cy="40" r="9" fill="#f6b33d"/>
+          <path d="M60 86 L76 104 L60 122 L44 104 Z" fill="#f6b33d"/>
+          <path d="M60 95 L68 104 L60 113 L52 104 Z" fill="#14213d"/>
+          <rect x="20" y="138" width="80" height="11" fill="#f6b33d"/>
+          <rect x="20" y="157" width="80" height="11" fill="#f6b33d"/>
+          <rect x="20" y="176" width="80" height="11" fill="#f6b33d"/>
+          <rect x="20" y="195" width="80" height="11" fill="#f6b33d"/>
+        </svg>
+        <div>
+          <h2>Made by a real captain</h2>
+          <p>Captain of the Ship is designed by a Master Mariner who has spent more than 24 years at sea.</p>
+          <p>The ranks you climb, from Trainee Seaman to Captain, are the real ones used on merchant ships, and every ship you discover comes with a true fact about it.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Captain of the Ship Games</p>
+      <p>Contact: <a href="mailto:captainofthegame.studio@gmail.com">captainofthegame.studio@gmail.com</a></p>
+      <p><a href="privacy.html">Privacy policy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
